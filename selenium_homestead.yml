@@ -1,0 +1,19 @@
+---
+- hosts: all
+  tasks:
+    - name: Install chromium-chromedriver
+      sudo: true
+      apt: name=chromium-chromedriver state=present update_cache=yes
+    - name: Install Java JRE
+      sudo: true
+      apt: name=openjdk-7-jre-headless state=present
+    - name: Install Xvfb
+      sudo: true
+      apt: name=xvfb state=present
+    - name: Make selenium directory
+      file: path=~/selenium state=directory
+    - name: Download Selenium Standalone
+      get_url: url=http://goo.gl/IHP6Qw dest=~/selenium/selenium.jar
+    - name: Install Selenium Start command
+      sudo: true
+      copy: dest=/usr/local/bin/seleniumrun mode=0775 src=chromedriver

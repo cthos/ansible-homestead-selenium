@@ -1,0 +1,2 @@
+#! /bin/bash
+DISPLAY=:1 xvfb-run java -jar ~/selenium/selenium.jar -Dwebdriver.chrome.driver="/usr/lib/chromium-browser/chromedriver"

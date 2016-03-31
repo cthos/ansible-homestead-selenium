@@ -1,0 +1,2 @@
+[all]
+vagrant@homestead.dev     ansible_connection=ssh
