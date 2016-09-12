@@ -1,12 +1,15 @@
 ---
 - hosts: all
   tasks:
+    - name: Install chromium-browser
+      sudo: true
+      apt: name=chromium-browser state=present update_cache=yes
     - name: Install chromium-chromedriver
       sudo: true
       apt: name=chromium-chromedriver state=present update_cache=yes
     - name: Install Java JRE
       sudo: true
-      apt: name=openjdk-7-jre-headless state=present
+      apt: name=openjdk-8-jre-headless state=present
     - name: Install Xvfb
       sudo: true
       apt: name=xvfb state=present
