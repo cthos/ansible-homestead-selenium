@@ -1,2 +1,2 @@
 [all]
-vagrant@homestead.dev     ansible_connection=ssh
+192.168.10.12 ansible_user=vagrant

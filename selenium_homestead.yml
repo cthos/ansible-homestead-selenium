@@ -19,4 +19,4 @@
       get_url: url=http://goo.gl/IHP6Qw dest=~/selenium/selenium.jar
     - name: Install Selenium Start command
       sudo: true
-      copy: dest=/usr/local/bin/seleniumrun mode=0775 src=chromedriver
+      copy: dest=/usr/local/bin/seleniumrun mode=0775 src=seleniumrun
